@@ -1,7 +1,4 @@
-Feature: This is Example1 feature
-  This feature covers following
-  1. Example of a plain cucumber scenario with all keywords
-  2. Example of a plain cucumber scenario outline with all keywords
+Feature: This feature covers scenarios to list available basic keywords
 
   @Scenario1 @AND
   Scenario: This is plain scenario1
@@ -15,7 +12,7 @@ Feature: This is Example1 feature
     * is used when you are not sure of which keyword can be used
 
   @Scenario2
-  Scenario: This is plain scenario2
+  Scenario: This is plain scenario2 - Copy of scenario1. Used to show how AND and OR condition works for running scenarios based on tags from tag property in Cucumberoptions
   This scenario covers steps for all the keywords used in cucumber
   Please also note multiple lines written to show how it is covered and later you can see how it is displayed in result
     Given is used to set precondition
@@ -24,21 +21,4 @@ Feature: This is Example1 feature
     And is used to repeat Given, When and Then in subsequent steps
     But is used for negative validation, this is opposite of Then
     * is used when you are not sure of which keyword can be used
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
