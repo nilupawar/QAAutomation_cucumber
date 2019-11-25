@@ -1,6 +1,6 @@
 Important Note:-
 
-- If you use cucumber-java8 dependency(look into pom.xml) then it allows you to write your step defintion using java8 lambda 
+- If you use cucumber-java8 dependency(look into pom.xml) then it allows you to write your step definition using java8 lambda 
 
     e.g.
     Given("is used to set precondition", () -> {

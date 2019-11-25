@@ -34,4 +34,30 @@ public class KeywordsSteps {
     @Gitt("this is norway on")
     public void thisIsNorwayOn() {
     }
+
+    //In below example ? indicate 0 or 1 occurrence of the character that precedes it
+    @Given("^files? processed$")
+    public void fileProcessed(){
+    }
+
+    @Given("^i have (table|chair)$")
+    public void iHaveTable() {
+    }
+
+    @Given("^i do not have (?:table|chair)$")
+    public void iDoNotHaveTable() {
+    }
+
+      // Below commented step definition is also correct
+//    @Given("i have {int} pens")
+//    public void iHavePens(int arg0) {
+//    }
+
+    @Given("^i have (\\d+) pens?$")
+    public void iHavePen(int penCount){
+    }
+
+    @Given("first statement after second statement")
+    public void firstStatementAfterSecondStatement() {
+    }
 }
