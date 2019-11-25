@@ -30,7 +30,7 @@ import org.junit.runner.RunWith;
         tags = {"@Scenario1 or @Scenario2"},
 
 //         Selects test scenario for execution based on the specified tags. to create an OR condition use {"@ORtag1,@ORtag2"}
-//         OR {"@ORtag1 or @ORtag2"} and to create a OR condition use {"@ANDtag1","@ANDtag2"}. use {"~@NotToExecuteTag"}
+//         OR {"@ORtag1 or @ORtag2"} and to create a AND condition use {"@ANDtag1","@ANDtag2"}. use {"~@NotToExecuteTag"}
 
         dryRun = false,
 //        Default value is false. Right word to define is that dryRun ignore scenario execution. When set to true it will
