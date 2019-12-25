@@ -1,11 +1,18 @@
 package com.automation.qa.steps;
 
+import com.automation.qa.helper.Helper;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.cucumber.java.no.Gitt;
+import org.junit.Assert;
+import org.springframework.beans.factory.annotation.Autowired;
+
 
 public class KeywordsSteps {
+    @Autowired
+    Helper helper;
+
     @Given("is used to set precondition")
     public void is_used_to_set_precondition() {
     }
@@ -59,5 +66,13 @@ public class KeywordsSteps {
 
     @Given("first statement after second statement")
     public void firstStatementAfterSecondStatement() {
+    }
+
+    @Given("this step will run for multiple example row {string}")
+    public void thisStepWillRunForMultipleExampleRow(String rowNum) {
+        helper.incrementCount();
+        System.out.printf(helper.hashCode() + "Count value is : " + helper.getCount());
+        System.out.println("name is " + helper.getName());
+        System.out.println("Second name is " + helper.getSecondName());
     }
 }

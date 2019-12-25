@@ -4,8 +4,6 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
-
-
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "classpath:features",
@@ -27,16 +25,16 @@ import org.junit.runner.RunWith;
 //         json : generates execution reports in json format. Usually this report can be used by other plugins to generate useful reports
 //         rerun : generates a file which has details about all failed test scenario. This generated rerun file can be used by another test runner to rerun only the failed scenarios
 
-        tags = {"@Scenario1 or @Scenario2"},
+        tags = {"@MultiExamples"},
 
 //         Selects test scenario for execution based on the specified tags. to create an OR condition use {"@ORtag1,@ORtag2"}
 //         OR {"@ORtag1 or @ORtag2"} and to create a AND condition use {"@ANDtag1","@ANDtag2"}. use {"~@NotToExecuteTag"}
 
-        dryRun = false,
+        dryRun = true,
 //        Default value is false. Right word to define is that dryRun ignore scenario execution. When set to true it will
 //        search for all undefined steps and generate a step definition snippet for you. When set to true no actual execution for scenario steps
 
-        snippets = CucumberOptions.SnippetType.UNDERSCORE,
+        snippets = CucumberOptions.SnippetType.CAMELCASE,
 //         Step definition snippet format (name of method) depends on value set for this. Available values are
 //         `CucumberOptions.SnippetType.CAMELCASE` and `CucumberOptions.SnippetType.UNDERSCORE`
 

@@ -15,20 +15,20 @@
     </properties>
 
     <dependencies>
-<!--        <dependency>-->
-<!--            <groupId>io.cucumber</groupId>-->
-<!--            <artifactId>cucumber-java</artifactId>-->
-<!--            <version>${cucumber.version}</version>-->
-<!--            <scope>test</scope>-->
-<!--        </dependency>-->
-
-<!-- Use below syntax when you want to use step definition with lambda function-->
         <dependency>
             <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-java8</artifactId>
+            <artifactId>cucumber-java</artifactId>
             <version>${cucumber.version}</version>
             <scope>test</scope>
         </dependency>
+
+<!-- Use below syntax when you want to use step definition with lambda function-->
+<!--        <dependency>-->
+<!--            <groupId>io.cucumber</groupId>-->
+<!--            <artifactId>cucumber-java8</artifactId>-->
+<!--            <version>${cucumber.version}</version>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
 
         <dependency>
             <groupId>io.cucumber</groupId>
@@ -41,6 +41,29 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-spring</artifactId>
+            <version>4.8.0</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>5.2.2.RELEASE</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-test -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>5.2.2.RELEASE</version>
             <scope>test</scope>
         </dependency>
     </dependencies>

@@ -4,6 +4,7 @@ Feature: This feature will help to understand different ways of writing gherkin 
     Given first statement after second statement
     And first statement
 
+  @fewOthertags
   Scenario: Singular and plural steps : One step definition for below both steps
     * file processed
     * files processed
@@ -21,13 +22,19 @@ Feature: This feature will help to understand different ways of writing gherkin 
     * i have 1 pen
 
   Scenario: String value parameter
-    Given
+  Given
 
   Scenario: DataTable parameter
-    Given
+  Given
 
   Scenario: Example table parameter
-    Given
+  Given
 
-  Scenario: Multiple Example table parameter
-    Given
+  @MultiExamples
+  Scenario Outline: Multiple Example table parameter
+    * this step will run for multiple example row "<rowNum>"
+    Examples: TestData
+      | rowNum |
+      | 1      |
+      | 2      |
+      | 3      |
