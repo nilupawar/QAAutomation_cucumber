@@ -2,17 +2,17 @@ Important Note:-
 
 - RUN this maven using command
     
-    mvn clean test -Dspring.profiles.active=qa -Denvironment=sit
-    mvn clean test -Dspring.profiles.active=qa -Denvironment=sit -Dcucumber.options="--tags '@MultiExamples or @fewOthertags'"  (tags OR condition)
-    mvn clean test -Dspring.profiles.active=qa -Denvironment=sit -Dcucumber.options="--tags '@MultiExamples and @fewOthertags'" (tags AND condition)
-    mvn clean test -Dspring.profiles.active=qa -Denvironment=sit -Dcucumber.options="-t '@MultiExamples' -d"    (do dry run)
-    mvn clean test -Dspring.profiles.active=qa -Denvironment=sit -Dcucumber.options="-t '@MultiExamples' --threads 3" (run cucumber test with multiple threads)    
-    mvn clean test -Dspring.profiles.active=qa -Denvironment=sit -Dcucumber.options="-t '@MultiExamples' --no-dry-run" (always cause dryRun to false)
+    mvn clean test -Dspring.profiles.active=qa -Denvironment=sit __    
+    mvn clean test -Dspring.profiles.active=qa -Denvironment=sit -Dcucumber.options="--tags '@MultiExamples or @fewOthertags'"  (tags OR condition) __    
+    mvn clean test -Dspring.profiles.active=qa -Denvironment=sit -Dcucumber.options="--tags '@MultiExamples and @fewOthertags'" (tags AND condition) __
+    mvn clean test -Dspring.profiles.active=qa -Denvironment=sit -Dcucumber.options="-t '@MultiExamples' -d"    (do dry run) __    
+    mvn clean test -Dspring.profiles.active=qa -Denvironment=sit -Dcucumber.options="-t '@MultiExamples' --threads 3" (run cucumber test with multiple threads) __    
+    mvn clean test -Dspring.profiles.active=qa -Denvironment=sit -Dcucumber.options="-t '@MultiExamples' --no-dry-run" (always cause dryRun to false) __
 
     You may pass all arguments in intellij as well (VM options)
-    -Dspring.profiles.active=qa
-    -Denvironment=sit
-    -Dcucumber.options="-t '@MultiExamples' --no-dry-run"
+    -Dspring.profiles.active=qa  __    
+    -Denvironment=sit  __
+    -Dcucumber.options="-t '@MultiExamples' --no-dry-run"  __
 
 - You can run cucumber test without IDE and without junit test running if you have following jars
     cucumber-core, cucumber-java, cucumber-jvm-deps, gherkin
