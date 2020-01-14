@@ -71,7 +71,7 @@ public class KeywordsSteps {
     @Given("this step will run for multiple example row {string}")
     public void thisStepWillRunForMultipleExampleRow(String rowNum) {
         helper.incrementCount();
-        System.out.printf(helper.hashCode() + "Count value is : " + helper.getCount());
+        System.out.println(helper.hashCode() + " Count value is : " + helper.getCount());
         System.out.println("name is " + helper.getName());
         System.out.println("Second name is " + helper.getSecondName());
     }

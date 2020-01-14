@@ -25,7 +25,7 @@ import org.junit.runner.RunWith;
 //         json : generates execution reports in json format. Usually this report can be used by other plugins to generate useful reports
 //         rerun : generates a file which has details about all failed test scenario. This generated rerun file can be used by another test runner to rerun only the failed scenarios
 
-        tags = {"@MultiExamples"},
+        tags = {"@MultiExamples and @ExampleTag2"}, // please also look at EDIT configuration as test are also executed from that
 
 //         Selects test scenario for execution based on the specified tags. to create an OR condition use {"@ORtag1,@ORtag2"}
 //         OR {"@ORtag1 or @ORtag2"} and to create a AND condition use {"@ANDtag1","@ANDtag2"}. use {"~@NotToExecuteTag"}
