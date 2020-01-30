@@ -78,4 +78,12 @@ Important Note:-
                 If DI containers are used then it will take care of creation of hooks and stepdefinition
     
     
--     
+- run with below mvn command to generate allure report inside target/allure-result folder 
+                
+               mvn clean test -Dspring.profiles.active=qa -Denvironment=sit -Dcucumber.options="-t '@MultiExamples and @ExampleTag2' --no-dry-run" -Dallure.results.directory=target/allure-results     
+
+- read more about allure
+                
+               https://docs.qameta.io/allure/#_cucumber_jvm
+               
+-                 

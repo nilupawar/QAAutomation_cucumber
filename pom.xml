@@ -12,6 +12,7 @@
     <properties>
         <cucumber.version>4.8.0</cucumber.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <aspectj.version>1.8.10</aspectj.version>
     </properties>
 
     <dependencies>
@@ -66,6 +67,20 @@
             <version>5.2.2.RELEASE</version>
             <scope>test</scope>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-cucumber4-jvm -->
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-cucumber4-jvm</artifactId>
+            <version>2.13.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>${aspectj.version}</version>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -82,5 +97,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>

@@ -5,8 +5,16 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.cucumber.java.no.Gitt;
+import io.qameta.allure.Allure;
 import org.junit.Assert;
 import org.springframework.beans.factory.annotation.Autowired;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URISyntaxException;
+import java.nio.file.Paths;
 
 
 public class KeywordsSteps {
@@ -14,7 +22,9 @@ public class KeywordsSteps {
     Helper helper;
 
     @Given("is used to set precondition")
-    public void is_used_to_set_precondition() {
+    public void is_used_to_set_precondition() throws FileNotFoundException, URISyntaxException {
+
+            Allure.addAttachment("TestAttachment", new FileInputStream(Paths.get(this.getClass().getClassLoader().getResource("TestAttachmentFile").toURI()).toFile()));
     }
 
     @When("is used to show an action is performed")

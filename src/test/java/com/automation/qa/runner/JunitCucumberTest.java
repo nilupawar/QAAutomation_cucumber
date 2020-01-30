@@ -2,7 +2,13 @@ package com.automation.qa.runner;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
+import org.aspectj.util.FileUtil;
+import org.junit.AfterClass;
 import org.junit.runner.RunWith;
+
+import java.io.IOException;
+import java.net.URISyntaxException;
+import java.nio.file.Paths;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
@@ -15,10 +21,12 @@ import org.junit.runner.RunWith;
 //         path to step definition packages, multiple packages can be specified
 
         plugin = {"pretty"
-                ,"html:target/cucumber_html_output"
-                ,"json:target/cucumber_json_report.json"
-                ,"progress:target/cucumber_progress_report"
-                ,"rerun:target/cucumber_rerun_report"},
+                , "html:target/cucumber_html_output"
+                , "json:target/cucumber_json_report.json"
+                , "progress:target/cucumber_progress_report"
+                , "rerun:target/cucumber_rerun_report"
+                , "io.qameta.allure.cucumber4jvm.AllureCucumber4Jvm"
+        },
 
 //         pretty : generates console output with details of gherkin steps. if skipped you will not be able to explicitly see executed gherkin steps on console output
 //         html : generates execution reports in html format
@@ -30,7 +38,7 @@ import org.junit.runner.RunWith;
 //         Selects test scenario for execution based on the specified tags. to create an OR condition use {"@ORtag1,@ORtag2"}
 //         OR {"@ORtag1 or @ORtag2"} and to create a AND condition use {"@ANDtag1","@ANDtag2"}. use {"~@NotToExecuteTag"}
 
-        dryRun = true,
+        dryRun = false,
 //        Default value is false. Right word to define is that dryRun ignore scenario execution. When set to true it will
 //        search for all undefined steps and generate a step definition snippet for you. When set to true no actual execution for scenario steps
 
@@ -46,4 +54,10 @@ import org.junit.runner.RunWith;
 //         Default value is false. When set to true test will be marked failure when undefined or Pending steps are found
 )
 public class JunitCucumberTest {
+
+    @AfterClass
+    public static void finalise() throws URISyntaxException, IOException {
+        FileUtil.copyFile(Paths.get(JunitCucumberTest.class.getClassLoader().getResource("environment.properties").toURI()).toFile()
+                , Paths.get(System.getProperty("user.dir")).resolve(System.getProperty("allure.results.directory").concat("/environment.properties")).toFile());
+    }
 }
