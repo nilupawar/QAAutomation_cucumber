@@ -86,4 +86,6 @@ Important Note:-
                 
                https://docs.qameta.io/allure/#_cucumber_jvm
                
-- to specify the test tags in the command like you can also set system property 'cucumber.filter.tags' instead of specifying in cucumber.options                
+- to specify the test tags in the command like you can also set system property 'cucumber.filter.tags' instead of specifying in cucumber.options 
+
+- Always remember the difference between cucumber expressions and regular expressions while writing step definitions. cucumber express will never have start with ^ or end with $. having / in also indicates regular expression              
