@@ -86,4 +86,4 @@ Important Note:-
                 
                https://docs.qameta.io/allure/#_cucumber_jvm
                
--                 
+- to specify the test tags in the command like you can also set system property 'cucumber.filter.tags' instead of specifying in cucumber.options                
